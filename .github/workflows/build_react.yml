@@ -36,14 +36,11 @@ jobs:
       with:
         name: build
         path: output/test
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: build
-          path: output/test
-   
+    # THIS IS WHERE THE DATA IS PUBLISHED TO A BRANCH
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@master
+      env:
+        REPO: self
+        BRANCH: data_build
+        FOLDER: tools/data_build
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
