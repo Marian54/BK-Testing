@@ -28,7 +28,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --output ./bin
+    - run: npm run build --output ./dist
     - run: npm test
  
     - name: Archive production artifacts
