@@ -28,7 +28,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --output ./dist
+    - run: npm run build
     - run: npm test
     
     - name: Upload Artifact
@@ -43,4 +43,4 @@ jobs:
         REPO: self
         BRANCH: data_build
         FOLDER: tools/data_build
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
