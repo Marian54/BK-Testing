@@ -35,8 +35,8 @@ jobs:
         with:
           name: react-github-actions-build
           path: build
-       #   env:
-        #    CD:true
+          env:
+            CD:true
       - name: multiple command
         uses: appleboy/ssh-action@master
         with:
