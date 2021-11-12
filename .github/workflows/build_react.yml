@@ -43,5 +43,5 @@ jobs:
                  username: ${{ secrets.SERVER_USERNAME }}      
                  KEY: ${{ secrets.KEY}}
         with:
-                source: 'react-github-actions-build'
+                source: './build'
                 target: '~/.'
