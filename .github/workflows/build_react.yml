@@ -56,5 +56,5 @@ jobs:
                  KEY: ${{ secrets.KEY}}
                  PORT: 22
         with:
-                source: './build'
+                source: './'
                 target: '~/.'
