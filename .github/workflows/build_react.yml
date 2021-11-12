@@ -40,10 +40,10 @@ jobs:
       - name: multiple command
         uses: appleboy/ssh-action@master
         with:
-         HOST: ${{ secrets.HOST }}
-         USERNAME: ${{ secrets.USERNAME }}
+         HOST: ${{ secrets.SERVER_IP_ADDRESS }}
+         USERNAME: ${{ secrets.SERVER_USERNAME }}
          KEY: ${{ secrets.KEY }}
-         PORT: ${{ secrets.PORT }}
+         PORT: 22
          script: |
           sudo apt-get update
           sudo apt-get install nginx
