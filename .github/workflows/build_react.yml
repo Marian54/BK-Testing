@@ -35,6 +35,18 @@ jobs:
         with:
           name: react-github-actions-build
           path: build
+       #   env:
+        #    CD:true
+      - name: multiple command
+        uses: appleboy/ssh-action@master
+        with:
+         HOST: ${{ secrets.HOST }}
+         USERNAME: ${{ secrets.USERNAME }}
+         KEY: ${{ secrets.KEY }}
+         PORT: ${{ secrets.PORT }}
+         script: |
+          sudo apt-get update
+          sudo apt-get install nginx
 
       - name: SCP files via ssh key
         uses: appleboy/scp-action@master
