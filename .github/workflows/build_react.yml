@@ -45,8 +45,8 @@ jobs:
          KEY: ${{ secrets.KEY }}
          PORT: 22
          script: |
-          sudo apt-get update
-          sudo apt-get install nginx
+          sudo apt-get -y update
+          sudo apt-get -y install nginx
 
       - name: SCP files via ssh key
         uses: appleboy/scp-action@master
