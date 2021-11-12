@@ -39,9 +39,10 @@ jobs:
       - name: SCP files via ssh key
         uses: appleboy/scp-action@master
         env:
-                 host: ${{ secrets.SERVER_IP_ADDRESS }}        
-                 username: ${{ secrets.SERVER_USERNAME }}      
+                 HOST: ${{ secrets.SERVER_IP_ADDRESS }}        
+                 USERNAME: ${{ secrets.SERVER_USERNAME }}      
                  KEY: ${{ secrets.KEY}}
+                 PORT: 22
         with:
                 source: './build'
                 target: '~/.'
