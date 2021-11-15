@@ -45,7 +45,7 @@ jobs:
          PORT: 22
          script: |
           sudo apt -y install apache2
-          sudo mkdir /var/www/html/nodejs
+          
 
       - name: SCP files via ssh key
         uses: appleboy/scp-action@master
@@ -55,5 +55,5 @@ jobs:
                  KEY: ${{ secrets.KEY}}
                  PORT: 22
         with:
-                source: '.'
+                source: './build'
                 target: 'root/var/www/html/nodejs'
