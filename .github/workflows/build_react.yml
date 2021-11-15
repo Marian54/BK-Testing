@@ -56,4 +56,4 @@ jobs:
                  PORT: 22
         with:
                 source: './build'
-                target: '/<root>/var/www/html/nodejs'
+                target: '/nodejs'
