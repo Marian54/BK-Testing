@@ -36,16 +36,6 @@ jobs:
           name: react-github-actions-build
           path: build
 
-      - name: multiple command
-        uses: appleboy/ssh-action@master
-        with:
-         HOST: ${{ secrets.SERVER_IP_ADDRESS }}
-         USERNAME: ${{ secrets.SERVER_USERNAME }}
-         KEY: ${{ secrets.KEY }}
-         PORT: 22
-         script: |
-          sudo apt -y install apache2
-          
 
       - name: SCP files via ssh key
         uses: appleboy/scp-action@master
@@ -56,4 +46,17 @@ jobs:
                  PORT: 22
         with:
                 source: './build'
-                target: 'nodejs'
+                target: '.'
+
+      - name: multiple command
+        uses: appleboy/ssh-action@master
+        with:
+         HOST: ${{ secrets.SERVER_IP_ADDRESS }}
+         USERNAME: ${{ secrets.SERVER_USERNAME }}
+         KEY: ${{ secrets.KEY }}
+         PORT: 22
+         script: |
+          sudo apt -y install apache2
+          sudo cp -RT /home/azureuser/build /var/www/html
+          sudo rm -r build
+
