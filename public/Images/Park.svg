@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="496" height="113.827" viewBox="0 0 496 113.827">
+  <g id="Group_752" data-name="Group 752" transform="translate(-1219 -77.382)">
+    <text id="Smart_Parking" data-name="Smart Parking" transform="translate(1219 172.209)" fill="#210837" font-size="74" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Smart Parking</tspan></text>
+    <rect id="Rectangle_15" data-name="Rectangle 15" width="21.265" height="20.252" transform="translate(1604 113.275)" fill="#fff"/>
+    <path id="map-marker-alt" d="M17.416,50.717C2.727,29.422,0,27.237,0,19.411a19.411,19.411,0,0,1,38.821,0c0,7.826-2.727,10.012-17.416,31.307A2.427,2.427,0,0,1,17.416,50.717ZM19.411,27.5a8.088,8.088,0,1,0-8.088-8.088A8.088,8.088,0,0,0,19.411,27.5Z" transform="translate(1595 77.382)" fill="#210837"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="10.632" cy="10.632" r="10.632" transform="translate(1604 86.109)" fill="#fcd93b"/>
+  </g>
+</svg>
