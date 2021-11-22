@@ -39,7 +39,7 @@ jobs:
         env:
                  HOST: ${{ secrets.SERVER_IP_ADDRESS }}        
                  USERNAME: ${{ secrets.SERVER_USERNAME }}      
-                 KEY: ${{ secrets.PRIVATE_KEY }}
+                 KEY: ${{ secrets.KEY }}
                  PORT: 22
         with:
                 source: './build'
@@ -50,7 +50,7 @@ jobs:
         with:
          HOST: ${{ secrets.SERVER_IP_ADDRESS }}
          USERNAME: ${{ secrets.SERVER_USERNAME }}
-         KEY: ${{ secrets.PRIVATE_KEY }}
+         KEY: ${{ secrets.KEY }}
          PORT: 22
          script: |
           sudo apt -y install apache2
