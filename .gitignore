@@ -4,7 +4,9 @@
 /node_modules
 /.pnp
 .pnp.js
-/.idea
+# Ignore .idea files
+.idea/
+.idea/*
 # testing
 /coverage
 
