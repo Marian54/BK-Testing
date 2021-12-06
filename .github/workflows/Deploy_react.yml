@@ -48,6 +48,7 @@ jobs:
          KEY: ${{ secrets.KEY }}
          PORT: 22
          script: |
+          sudo apt-get -y update 
           sudo apt -y install apache2
           sudo cp -RT /home/azureuser/build /var/www/html
           sudo rm -r build
