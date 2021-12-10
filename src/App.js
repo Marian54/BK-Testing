@@ -1,9 +1,13 @@
 import "./App.css";
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
+<<<<<<< HEAD
 import {Route, BrowserRouter, Switch} from "react-router-dom";
 import ParkingLotPage from "./pages/ParkingLotsPage";
 import ParkingSpotPage from "./pages/ParkingSpotsPage";
+=======
+import { Route, BrowserRouter, Switch } from "react-router-dom";
+>>>>>>> 51c69b7abb256811f6a61dd1adc99fdae08c7dbe
 
 function App() {
     return (
