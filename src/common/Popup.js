@@ -4,7 +4,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
 function Popup(props) {
-    const {setTrigger, children, trigger} = props;
+    const {trigger} = props;
     return (
         trigger &&
         <div className="popup">
