@@ -1,0 +1,134 @@
+/*CSS for text area for Google Maps page*/
+.textStyle{
+    color: #210837;
+    text-align: left;
+    font-family: "Segoe UI", sans-serif;
+    letter-spacing: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.errorTextStyle{
+    color: red;
+    text-align: left;
+    font-family: "Segoe UI", serif;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.textPosition1{
+    position: absolute;
+    top: 157px;
+    left: 187px;
+}
+.textPosition2{
+    position: absolute;
+    top: 249px;
+    left: 187px;
+}
+.textPosition3{
+    position: absolute;
+    top: 450px;
+    left: 187px;
+ }
+.textPosition4{
+    position: absolute;
+    top: 545px;
+    left: 187px;
+}
+
+/*CSS for text area for Popup*/
+.textAreaStylePopup{
+    color: #210837;
+    text-align: center;
+    font-family: "Segoe UI", serif;
+    letter-spacing: 0;
+    font-size: 16px;
+    font-weight: 490;
+}
+
+/*CSS for input and text field*/
+.inputBox{
+    width: 512px;
+    height: 34px;
+    border-color:#e6e6e6;
+    border-style: solid;
+    opacity: 1;
+    border-radius: 5px;
+    outline-color: royalblue;
+}
+
+.textareaBox{
+    border-color:#e6e6e6;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    outline-color: royalblue;
+    width: 502px;
+    height: 128px;
+}
+
+.input1{
+    position: absolute;
+    top: 185px;
+    left: 185px;
+}
+.textareaPosition{
+    position: absolute;
+    top: 275px;
+    left: 185px;
+}
+.input2{
+    position: absolute;
+    top: 477px;
+    left: 185px;
+}
+.input3{
+    position: absolute;
+    top: 572px;
+    left: 185px;
+}
+.input4{
+    position: absolute;
+    top: 630px;
+    left: 770px;
+    width: 570px;
+}
+input{
+    font-family: "Segoe UI", sans-serif;
+    letter-spacing: 0;
+    opacity: 1;
+    color: black;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 500;
+    padding-left: 7px;
+}
+input::placeholder{
+    color: #33333333;
+    text-align: left;
+}
+
+textarea{
+    font-family: "Segoe UI", sans-serif;
+    letter-spacing: 0;
+    opacity: 1;
+    color: black;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 500;
+    padding: 10px;
+    resize: none;
+}
+
+/*CSS for Autocomplete for /GoogleMap*/
+.autocomplete{
+    width: 580px;
+    height: 200px;
+    max-height: 200px;
+    max-width: 580px;
+    position: absolute;
+    left: 772px;
+    top: 675px;
+}

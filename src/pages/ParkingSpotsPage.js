@@ -7,7 +7,7 @@ import YellowButton from "../commonComponents/YellowButton";
 import {makeStyles} from "@material-ui/core/styles";
 import {Grid} from "@mui/material";
 import { ReactComponent as ParkingIcon } from '../Icons/ParkingIcon.svg';
-import {GET_PARKING_SPOTS} from "../Constants";
+import {GET_PARKING_SPOTS, USER} from "../Constants";
 function createData(id, number, type, status, dateAndTime,  actions) {
     return { id, number, type, status, dateAndTime, actions };
 }
@@ -55,6 +55,20 @@ export default function ParkingSpotPage() {
     const [lotName]=useState('Coresi Business Park 1')
     const authCookie = localStorage.getItem('token');
     useEffect(() => {
+        fetch(`api/v1/authentication/login`,
+            {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: USER
+            }
+        ).then((response) => {
+            if (!response.ok) {
+                return Promise.reject(response);
+            }
+        }).then(()=>{
         if(authCookie)
             fetch(
                 GET_PARKING_SPOTS,
@@ -67,7 +81,7 @@ export default function ParkingSpotPage() {
                 }).then((response) => response.json())
                 .then((data) => {
                     setLotsData(data)
-                }).catch(err => console.log(err.message))
+                }).catch(err => console.log(err.message))})
     }, [authCookie]);
     const selectHandler = () => {
         setModalIsOpen(true);

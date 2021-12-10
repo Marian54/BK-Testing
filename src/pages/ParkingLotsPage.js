@@ -7,7 +7,7 @@ import {InputAdornment, makeStyles, Toolbar} from "@material-ui/core";
 import {Grid, IconButton} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import YellowButton from "../commonComponents/YellowButton";
-import {GET_PARKING_LOTS} from "../Constants";
+import {GET_PARKING_LOTS, USER} from "../Constants";
 const headCells = [
     {id: 'id', label: 'ID'},
     {id: 'name', label: 'Name'},
@@ -48,7 +48,21 @@ export default function ParkingLotPage() {
     const classes = useStyles();
     const authCookie = localStorage.getItem('token');
     useEffect(() => {
-        if(authCookie)
+        fetch(`api/v1/authentication/login`,
+            {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: USER
+            }
+        ).then((response) => {
+            if (!response.ok) {
+                return Promise.reject(response);
+            }
+        })
+            .then(()=> {if(authCookie)
                 fetch(
                     GET_PARKING_LOTS,
                     {
@@ -60,7 +74,7 @@ export default function ParkingLotPage() {
                     }).then((response) => response.json())
                     .then((data) => {
                         setLotsData(data)
-                    }).catch(err => console.log(err.message))
+                    }).catch(err => console.log(err.message))})
     }, [authCookie]);
     return <div>
         <Grid container pt={15} pl={17} pr={15}>

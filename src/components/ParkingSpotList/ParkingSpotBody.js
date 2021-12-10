@@ -13,9 +13,9 @@ export default function ParkingSpotBody(props) {
         return <LensIcon sx={{ color:"red", fontSize:'10px'}}/>
     }
     return <TableBody>
-    {recordsAfterPagingAndSorting().map(({id,number,type, status,dateAndTime}) => (
-        <TableRow key={id}>
-            <TableCell className={classes.customCell}>{id}</TableCell>
+    {recordsAfterPagingAndSorting().map(({id_Spot,number,type, status,dateAndTime}) => (
+        <TableRow key={id_Spot}>
+            <TableCell className={classes.customCell}>{id_Spot}</TableCell>
             <TableCell className={classes.customCell} sx={{color:'red'}}>
                 {number}
             </TableCell>

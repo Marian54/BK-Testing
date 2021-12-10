@@ -15,17 +15,44 @@ export default function TablePaginationActions(props) {
     const paginationItems = useMemo(() => {
         const pages = [];
         if (totalPages > 2) {
-            pages.push(
+            if(page-1<0)
+                pages.push( <WhiteButton
+                        text={page+1}
+                        key={page + 1}
+                        click={(event) => onPageChange(event, page)}
+                    />,
+                    <WhiteButton
+                        text={page + 2}
+                        key={page + 2}
+                        click={(event) => onPageChange(event, page + 1)}
+                    />)
+            else if(page+2>totalPages)
+            {pages.push(
                 <WhiteButton
-                    text={page - 1}
+                    text={page}
+                    key={page}
                     click={(event) => onPageChange(event, page - 1)}
                 />,
                 <WhiteButton
+                    text={page+1}
+                    key={page + 1}
+                    click={(event) => onPageChange(event, page)}
+                />)}
+            else
+            pages.push(
+                <WhiteButton
                     text={page}
+                    key={page}
+                    click={(event) => onPageChange(event, page - 1)}
+                />,
+                <WhiteButton
+                    text={page+1}
+                    key={page + 1}
                     click={(event) => onPageChange(event, page)}
                 />,
                 <WhiteButton
-                    text={page + 1}
+                    text={page + 2}
+                    key={page + 2}
                     click={(event) => onPageChange(event, page + 1)}
                 />
             );

@@ -1,0 +1,60 @@
+/*CSS for Main Action Buttons ; Pos1->Create New Parking Lot Button ; Pos2->Create Lot Button*/
+.mainActionButton {
+    background: #FCD93B 0 0 no-repeat padding-box;
+    border-radius: 5px;
+    border: none;
+    width: 234px;
+    height: 47px;
+    font-family: "Segoe UI", serif;
+    font-weight: 640;
+    letter-spacing: 0;
+    color: #210837;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 27px;
+    opacity: 1;
+    alignment: center;
+}
+
+.buttonPosition1{
+    position: absolute;
+    top: 210px;
+    left: 1080px;
+}
+
+.buttonPosition2{
+    position: absolute;
+    top: 690px;
+    left: 185px;
+}
+
+/*CSS for Outlined Buttons*/
+.outLinedButton{
+    width: 115px;
+    height: 42px;
+    font-size: 16px;
+    alignment: center;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 640;
+    font-family: "Segoe UI", serif;
+    border-color: #210837;
+    border-radius: 5px;
+    border-width: thin;
+    color: #210837;
+    background: #FFF 0 0 no-repeat padding-box;
+    opacity: 1;
+}
+
+.buttonPopup1{
+    position: absolute;
+    top: 150px;
+    left: 120px;
+}
+
+.buttonPopup2{
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
